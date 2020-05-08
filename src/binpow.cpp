@@ -10,9 +10,9 @@ int binpow(int a, int n){
         return b*b;
     }
 }
-int main(){
-    int a, b, n;
-    cin >> a >> n;
-    cout << binpow(a, n);
-    return 0;
-}
+/* int main(){ */
+/*     int a, b, n; */
+/*     cin >> a >> n; */
+/*     cout << binpow(a, n); */
+/*     return 0; */
+/* } */
