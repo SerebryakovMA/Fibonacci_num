@@ -4,7 +4,7 @@
 class Matrix {
     public:
        
-    explicit Matrix(const std::vector < std::vector<double> >& a);
+    explicit Matrix(const std::vector < std::vector<std::size_t> >& a);
     
     ~Matrix() = default;
     
@@ -18,9 +18,9 @@ class Matrix {
   	
   	static Matrix identity (size_t rows);
 
-    double at(std::size_t a, std::size_t b) const;
+    std::size_t at(std::size_t a, std::size_t b) const;
 
     private:
-    std::vector < std::vector<double> > value;
+    std::vector < std::vector<std::size_t> > value;
 };
           

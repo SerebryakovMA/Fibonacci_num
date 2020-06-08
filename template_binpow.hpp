@@ -1,4 +1,5 @@
 #pragma once
+
 #include "struct_matrix.hpp"
 
 template<typename T> T identity(const T& a) {

@@ -1,11 +1,11 @@
 #include "struct_matrix.hpp"
 #include <vector>
 
-Matrix::Matrix(const std::vector < std::vector<double> >& a): value(a)
+Matrix::Matrix(const std::vector < std::vector<std::size_t> >& a): value(a)
 {};
 
 Matrix::Matrix(std::size_t num_rows, std::size_t num_cols)
-   : value(num_rows, std::vector<double>(num_cols, 0))
+   : value(num_rows, std::vector<std::size_t>(num_cols, 0))
 {};
 
 Matrix Matrix::operator* (const Matrix &rhs) const {
@@ -52,7 +52,7 @@ Matrix Matrix::identity (std::size_t rows)
     return elementary;
 };
  
-double Matrix::at(std::size_t a, std::size_t b) const
+std::size_t Matrix::at(std::size_t a, std::size_t b) const
 {
     return value[a][b];
 };

@@ -2,11 +2,14 @@
 #include "struct_matrix.hpp"
 #include "template_binpow.hpp"
 
-int main()
+int main() // complexity O(log n) arithmetic operations
 {
     Matrix initial({{0, 1}, {1, 1}});
-    unsigned int n = 12;
-    double F_n = binpow(initial, n).at(1, 1);
-    std::cout << F_n <<std::endl;
+    unsigned int n_1 = 9; // F_9 = 34
+    unsigned int n_2 = 34; // F_34 = 5702887
+    unsigned int n_3 = 50; // F_50 = 12586269025
+    std::cout << binpow(initial, n_1).at(1, 1) - binpow(initial, n_1).at(0, 0) <<std::endl;
+    std::cout << binpow(initial, n_2).at(1, 1) - binpow(initial, n_2).at(0, 0) <<std::endl;
+    std::cout << binpow(initial, n_3).at(1, 1) - binpow(initial, n_3).at(0, 0) <<std::endl;
     return 0;
 }
