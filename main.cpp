@@ -1,19 +1,12 @@
 #include <iostream>
-#include <vector>
-#include "matrix.hpp"
+#include "struct_matrix.hpp"
+#include "template_binpow.hpp"
 
-int main(){
-    Matrix matrix;
-
-    std::vector<int> initial_matrix;
-    std::vector<int> matrix_comp;
-
-    std::vector<int> p = {0, 1 , 1, 1};
-    matrix.set_values(p);
-    int n;
-    std::cin >> n;
-    int F_n;
-    F_n = matrix.get_matrix(matrix.binpow(p, n))[1] + matrix.get_matrix(matrix.binpow(p, n))[2];
+int main()
+{
+    Matrix initial({{0, 1}, {1, 1}});
+    unsigned int n = 12;
+    double F_n = binpow(initial, n).at(1, 1);
     std::cout << F_n <<std::endl;
     return 0;
 }
