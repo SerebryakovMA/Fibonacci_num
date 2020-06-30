@@ -20,3 +20,14 @@ template <typename T, unsigned int n> T binpow(const T& a) {
         return b*b;
     }
 }
+
+template <unsigned int n, typename T> T binpow(const T& a) {
+    if constexpr (n == 0)
+      return identity<T>(a);
+    if constexpr (n % 2 == 1)
+        return binpow<n-1>(a) * a;
+    else {
+        T b = binpow<n/2>(a);
+        return b*b;
+    }
+}
