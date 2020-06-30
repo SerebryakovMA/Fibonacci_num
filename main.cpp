@@ -8,8 +8,8 @@ int main() // complexity O(log n) arithmetic operations
     unsigned int n_1 = 9; // F_9 = 34
     unsigned int n_2 = 34; // F_34 = 5702887
     unsigned int n_3 = 50; // F_50 = 12586269025
-    std::cout << binpow(initial, n_1).at(1, 1) - binpow(initial, n_1).at(0, 0) <<std::endl;
-    std::cout << binpow(initial, n_2).at(1, 1) - binpow(initial, n_2).at(0, 0) <<std::endl;
-    std::cout << binpow(initial, n_3).at(1, 1) - binpow(initial, n_3).at(0, 0) <<std::endl;
+    std::cout << binpow<n_1>(initial).at(1, 1) - binpow<n_1>(initial).at(0, 0) <<std::endl;
+    //std::cout << binpow(initial, n_2).at(1, 1) - binpow(initial, n_2).at(0, 0) <<std::endl;
+    //std::cout << binpow(initial, n_3).at(1, 1) - binpow(initial, n_3).at(0, 0) <<std::endl;
     return 0;
 }
